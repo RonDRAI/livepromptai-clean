@@ -1,8 +1,8 @@
 {
   "name": "livepromptai-handoff",
   "version": "1.0.0",
-  "private": true,
   "description": "Voice-Enhanced LivePromptAI - AI-powered sales guidance with real-time voice recognition",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,64 +14,61 @@
     "db:setup": "node database/setup.js",
     "db:seed": "psql -h localhost -U $PGUSER -d $PGDATABASE -f database/seed.sql",
     "db:reset": "npm run db:setup && npm run db:seed",
-    "postinstall": "echo \"✅ Installation complete! Run 'npm run dev' to start the frontend and 'npm run server:dev' to start the API server.\"",
-    "prebuild": "node -e \"try{require('fs').readdirSync('./components/ui')}catch(e){process.exit(0)}\""
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+    "test": "echo \"No tests specified\" && exit 0",
+    "postinstall": "echo \"✅ Installation complete! Run 'npm run dev' to start the frontend and 'npm run server:dev' to start the API server.\""
   },
   "dependencies": {
-    "@radix-ui/react-label": "^1.0.2",
+    "next": "13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "^2.12.0",
+    "clsx": "^2.1.1",
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.5.2",
+    "lucide-react": "^0.469.0",
+    "framer-motion": "^11.0.0",
+    "react-day-picker": "^8.10.1",
+    "embla-carousel": "^8.0.0",
+    "embla-carousel-react": "^8.0.0",
+
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
-    "@radix-ui/react-aspect-ratio": "^1.0.5",
     "@radix-ui/react-avatar": "^1.1.10",
-    "@radix-ui/react-checkbox": "^1.0.5",
-    "@radix-ui/react-collapsible": "^1.0.3",
-    "@radix-ui/react-context-menu": "^2.1.6",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-hover-card": "^1.1.15",
     "@radix-ui/react-popover": "^1.1.15",
-    "@radix-ui/react-progress": "^1.0.5",
-    "@radix-ui/react-scroll-area": "^1.0.5",
-    "@radix-ui/react-select": "^2.1.6",
-    "@radix-ui/react-separator": "^1.0.5",
-    "@radix-ui/react-slider": "^1.2.1",
-    "@radix-ui/react-switch": "^1.0.3",
-    "@radix-ui/react-tabs": "^1.0.5",
     "@radix-ui/react-toast": "^1.2.15",
     "@radix-ui/react-tooltip": "^1.2.8",
-    "autoprefixer": "^10.4.20",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "cmdk": "^1.0.0",
-    "embla-carousel": "^8.0.0",
-    "embla-carousel-react": "^8.0.0",
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.469.0",
-    "next": "13.5.6",
-    "next-themes": "^0.3.0",
-    "postcss": "^8.4.38",
-    "react": "18.2.0",
-    "react-day-picker": "^8.10.1",
-    "react-dom": "18.2.0",
-    "recharts": "^2.12.0",
-    "tailwind-merge": "^2.5.2",
+    "@radix-ui/react-checkbox": "^1.0.5",
+    "@radix-ui/react-progress": "^1.0.5",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-tabs": "^1.0.5",
+    "@radix-ui/react-aspect-ratio": "^1.0.5",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-context-menu": "^2.1.5",
+
     "tailwindcss": "^3.4.17",
-    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.9.2",
-    "vaul": "^0.9.1"
+    "vaul": "^0.9.1",
+    "cmdk": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
-    "@types/react": "^18.2.66",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.5",
-    "nodemon": "^3.1.4"
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "nodemon": "^3.1.4",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss-animate": "^1.0.7",
+    "@types/react": "^18.2.66",
+    "@types/node": "^20.14.10"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "keywords": [
     "sales",
@@ -87,9 +84,10 @@
     "typescript",
     "real-time"
   ],
+  "author": "LivePromptAI Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RonDRAI/livepromptai"
+    "url": "https://github.com/RonDRAI/livepromptai-clean"
   }
 }
